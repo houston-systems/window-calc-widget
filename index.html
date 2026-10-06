@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="theme-color" content="#0d7f76" />
+    <title>Калькулятор розмірів вікна | Insulate Ukraine</title>
+    <link rel="stylesheet" href="styles.css?v=2026-10-06-4" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <main class="widget-card">
+        <div class="widget-intro">
+          <p class="eyebrow">Правильні розміри для самостійного монтажу</p>
+          <h1>Калькулятор розмірів вікна</h1>
+        </div>
+
+        <form id="window-form" class="calculator-form">
+          <div class="form-row">
+            <label class="field" for="material">
+              <span>Тип вікна</span>
+              <select id="material" name="material">
+                <option value="uPVC">uPVC</option>
+                <option value="wood">Дерево</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-row two-col">
+            <label class="field" for="width">
+              <span>Ширина вікна (мм)</span>
+              <input id="width" name="width" type="number" min="0" step="1" value="1200" required />
+            </label>
+
+            <label class="field" for="height">
+              <span>Висота вікна (мм)</span>
+              <input id="height" name="height" type="number" min="0" step="1" value="1500" required />
+            </label>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="primary-btn">Розрахувати</button>
+          </div>
+        </form>
+
+        <section class="result-panel" aria-live="polite">
+          <div class="result-grid">
+            <div class="result-item">
+              <span class="label">Ширина рами</span>
+              <strong id="frame-width">0 мм</strong>
+            </div>
+            <div class="result-item">
+              <span class="label">Висота рами</span>
+              <strong id="frame-height">0 мм</strong>
+            </div>
+            <div class="result-item">
+              <span class="label">Ширина скла</span>
+              <strong id="glazing-width">0 мм</strong>
+            </div>
+            <div class="result-item">
+              <span class="label">Висота скла</span>
+              <strong id="glazing-height">0 мм</strong>
+            </div>
+          </div>
+
+          <p class="help-text" id="notes">Для uPVC використані типові припуски...</p>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js?v=2026-10-06-4"></script>
+  </body>
+</html>
